@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.http import HttpResponse
-from eventos.views import *
+from agenda.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^agenda/$',listaAgenda, name = listaAgenda),
+    url(r'^agenda/$',listaAgenda, name = 'listaAgenda'),
     url(r'^agendas/([0-9]{1})/',get_agenda_byID),
-    url(r'^agendainstitucional/$',listaAgendainstirucional, name = listaAgendainstirucional),
+    url(r'^agendainstitucional/$',listaAgendainstirucional, name = 'listaAgendainstirucional'),
 ]
