@@ -18,6 +18,6 @@ def listaAgendainstirucional(request):
     retorno = "<h1>Agenda Instituicional</h1>"
     lista = AgendaInstitucional.objects.all()
     for AgendaInstitucional in lista:
-        retorno += '</br>Agenda: {}</br>'.format(AgendaInstitucional.nome)
+        retorno += '</br>Agenda: {}</br>'.format(AgendaInstitucional.compromisso)
     return HttpResponse(retorno)
 # Create your views here.
